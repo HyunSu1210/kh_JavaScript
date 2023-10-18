@@ -17,3 +17,39 @@ function checkMood(mood) {
     else cry();
 }
 checkMood("sad");
+
+// 콜백 함수
+function checkMoodCallback(mood, goodCall, badCAll) { 
+    if(mood === "good") goodCall();
+    else badCAll();
+}
+checkMoodCallback("good", dance, cry);
+
+// 타이머 설정과 Callback 함수
+function buyTobe(item, price, quantity, callback) {
+    console.log(item + " 상품을 " + quantity + " 개 골라서 점원에게 주었습니다.");
+    setTimeout(function() {
+        console.log("계산이 필요합니다.");
+        let total = price * quantity;
+        callback(total);
+
+    }, 2000);
+}
+function pay(n) {
+    console.log("지불할 금액은 : " + n + "입니다.");
+}
+// buyTobe("맥북에어(스타라이트)",1300000,2,pay);
+
+
+// 클로저 : 함수가 해당 함수의 스코프 외부에 있는 변수를 접근할 수 있는 매커니즘
+function makeCounter() {
+    let count = 100;
+    return function() {
+        count++;
+        console.log(count);
+    }
+}
+const counter = makeCounter();
+counter();
+counter();
+counter();
