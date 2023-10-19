@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경고창 출력</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        a:link, a:visited {
+            color: white;
+            text-decoration: none;
+        }
+        #container {
+            display: flex;
+            width: 500px;
+            margin: 10px auto;
+            padding: 0;
+        }
+        .Green {
+            background-color: green;
+            color: white;
+        }
+        .Orange {
+            background-color: orange;
+            color: white;
+        }
+        .Purple {
+            background-color: purple;
+            color: white;
+        }
+        .btnListUl {
+            list-style: none;
+            display: flex;
+        }
+        li {
+            display:inline-block;
+            width:120px;
+            border:1px solid #ccc;
+            padding:10px 15px;	
+            font-size:16px;
+            display: flex;
+            justify-content: center;
+            text-align:center;
+        }
+        .back {
+	    width: 500px;
+	    height: 300px;
+	    margin: 30px auto;
+	    border: 2px solid #ccc;
+	    border-radius: 15px;
+	}
+    </style>
+</head>
+<body>
+    <div id="container">
+            <ul class="btnListUl">
+                <!-- <li class="Green"><a href="#" onclick="alert('Green 버튼을 클릭했습니다.')">Green</a></li>
+                <li class="Orange"><a href="#" onclick="alert('Orange 버튼을 클릭했습니다.')">Orange</a></li>
+                <li class="Purple"><a href="#" onclick="alert('Purple 버튼을 클릭했습니다.')">Purple</a></li> -->
+                <li class="Green"><a href="#" onclick="btnClick('Green')">Green</a></li>
+                <li class="Orange"><a href="#" onclick="btnClick('Orange')">Orange</a></li>
+                <li class="Purple"><a href="#" onclick="btnClick('Purple')">Purple</a></li>
+            </ul>
+            
+    </div>
+    <p class="back"></p>
+    <script>
+        function btnClick(color) {
+            let result = document.querySelector(".back");
+            result.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
