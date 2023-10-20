@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            border: 0;
+        }
+        #container {
+            display: flex;
+            width: 500px;
+            margin: 10px auto;
+        }
+        .btn {
+            margin: 2px;
+            flex-grow: 1; /* 남는 공간을 1로 채워서 동일하게 만듦 */
+            display: flex;
+            justify-content: center;
+            border: 1px solid #ccc;
+            padding: 10px 16px;
+            color: white;
+            border-radius: 2px;
+        }
+        .green {
+            background-color: green;
+        }
+        .orange {
+            background-color: orange;
+        }
+        .purple {
+            background-color: purple;
+        }
+        #color-box {
+            width: 500px;
+            height: 300px;
+            margin: 30px auto;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="btn green" onclick="changeBG('green')">Green</div>
+        <div class="btn orange" onclick="changeBG('Orange')">Orange</div>
+        <div class="btn purple" onclick="changeBG('Purple')">Purple</div>
+    </div>
+    <div id="color-box"></div>
+
+    <script>
+        // 예제 1번
+        // const btns = document.querySelectorAll(".btn");
+        // for(let i = 0; i < btns.length; i++) {
+        //     btns[i].addEventListener("click", function() {
+        //         // this : 여기에서는 동적 바인딩. click될 때 this가 정해짐.
+        //         alert(`${this.textContent} 버튼이 눌러졌습니다.`);
+        //     });
+        // }
+        
+        // 예제 1-2번
+        function changeBG(color) {
+            const rst = document.querySelector('#color-box');
+            rst.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

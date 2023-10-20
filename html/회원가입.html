@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        #container {
+            display: flex;
+            justify-content: center;
+
+        }
+        .id-input-box {
+            display: flex;
+
+        }
+        input {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid blue;
+            border-radius: 5px;
+            
+        }
+        button {
+            width: 70px;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            background-color: rgb(55, 55, 177);
+            border: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form action="#">
+            <div class="id-input-box">
+                <input type="text" id="id-txt" placeholder="아이디 입력">
+                <p class="id-input-check"></p>
+                <button class="id-input-btn">확인</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
